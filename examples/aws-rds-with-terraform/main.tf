@@ -28,7 +28,7 @@ resource "aws_db_instance" "rds_instance" {
   name                = "myDbName${split("-", var.qovery_environment_id)[0]}"
   username            = "yourDbUsername"
   password            = "yourPassword"
-  publicly_accessible = false
+  publicly_accessible = true
   skip_final_snapshot = true
 
   tags = {
