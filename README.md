@@ -1,4 +1,4 @@
-# lifecycle-job-examples
+# Lifecycle Job Examples
 
 This repository contains ready to use Qovery Lifecycle Jobs examples
 
@@ -21,11 +21,11 @@ Here is a list of all the examples
 | Description                                                           | Folder                                                              |
 |-----------------------------------------------------------------------|---------------------------------------------------------------------|
 | Call HTTP endpoint when an Environment is created                     | [here](/examples/call-http-endpoint-when-an-environment-is-created) |
+| Create and Destroy an AWS RDS instance with Terraform                 | [here](/examples/aws-rds-with-terraform)                            |
 | Seed a database with a custom script                                  | WIP                                                                 |
 | Seed a database with [Replibyte](https://github.com/Qovery/Replibyte) | WIP                                                                 |
-| Create and Destroy a RDS instance with Terraform                      | WIP                                                                 |
-| Create and Destroy a SQS queue with Pulumi                            | WIP                                                                 |
-| Create and Destroy a Lambda with Serverless                           | WIP                                                                 |
+| Create and Destroy an AWS SQS queue with Pulumi                       | WIP                                                                 |
+| Create and Destroy an AWS Lambda with Serverless                      | WIP                                                                 |
 
 ## How to contribute
 
