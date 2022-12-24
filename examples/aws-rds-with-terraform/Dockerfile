@@ -16,3 +16,5 @@ RUN terraform init \
 -backend-config="key=${TF_VAR_qovery_environment_id}" \
 -backend-config="region=${TF_VAR_aws_region}" \
 -backend-config="encrypt=false"
+
+ENTRYPOINT [ "/bin/sh" ]
