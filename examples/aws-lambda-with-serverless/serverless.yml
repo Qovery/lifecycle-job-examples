@@ -1,4 +1,4 @@
-service: aws-lambda-with-serverless-
+service: aws-lambda-with-serverless
 
 frameworkVersion: '3'
 

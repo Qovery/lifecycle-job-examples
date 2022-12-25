@@ -11,4 +11,4 @@ COPY . .
 
 RUN serverless plugin install -n serverless-manifest-plugin
 
-ENTRYPOINT [ "/bin/sh" ]
+ENTRYPOINT [ "entrypoint.sh" ]

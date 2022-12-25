@@ -71,8 +71,14 @@ docker run \
 
 To inject back environment variables via Qovery Lifecycle Job output:
 
-Start Event CMD Arguments: `["-c","serverless deploy --stage $(echo \"$QOVERY_ENVIRONMENT_ID\" | cut -d \"-\" -f 1) && serverless manifest --stage $(echo \"$QOVERY_ENVIRONMENT_ID\" | cut -d \"-\" -f 1) -p qovery-output.js"]`
+Start Event CMD Arguments: 
+```shell
+["-c","serverless deploy --stage \$QOVERY_ENVIRONMENT_ID && serverless manifest --stage \$QOVERY_ENVIRONMENT_ID -p qovery-output.js"]
+```
 
-Delete Event CMD Arguments: `["-c","serverless remove --stage $(echo \"$QOVERY_ENVIRONMENT_ID\" | cut -d \"-\" -f 1)"]`
+Delete Event CMD Arguments:
+```shell
+["-c","serverless remove --stage \$QOVERY_ENVIRONMENT_ID"]
+```
 
 ![](assets/1.png)
