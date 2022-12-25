@@ -12,6 +12,7 @@ provider:
     project: aws-lambda-with-serverless
     owner: qovery
     stage: dev
+    qovery_environment_id: ${env:QOVERY_ENVIRONMENT_ID}
     ttl: 0
 
 functions:
