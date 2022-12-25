@@ -1,0 +1,23 @@
+service: aws-lambda-with-serverless-${env:QOVERY_ENVIRONMENT_ID}
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-manifest-plugin
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  tags:
+    project: aws-lambda-with-serverless
+    owner: qovery
+    stage: dev
+    ttl: 0
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          method: GET
+          path: /hello
