@@ -66,3 +66,11 @@ docker run \
   -it --entrypoint /bin/sh aws-lambda-with-serverless \
   -c "serverless manifest --json"
 ```
+
+## Qovery
+
+To inject back environment variables via Qovery Lifecycle Job output:
+
+Start Event CMD Arguments: `["-c", "serverless deploy && serverless manifest -p qovery-output.js"]`
+
+Delete Event CMD Arguments: `["-c", "serverless remove"]`

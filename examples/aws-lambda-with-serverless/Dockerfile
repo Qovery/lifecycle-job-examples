@@ -10,3 +10,5 @@ RUN npm install -g serverless
 COPY . .
 
 RUN serverless plugin install -n serverless-manifest-plugin
+
+ENTRYPOINT [ "/bin/sh" ]
