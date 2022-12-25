@@ -10,6 +10,8 @@ This repository contains ready to use Qovery Lifecycle Jobs examples
 4. Set the "Root application path" to the example you want to use (e.g. `examples/seed-a-database-with-replibyte`)
 5. Set the "Dockerfile path" to the Dockerfile in the example you want to use (e.g. `Dockerfile`)
 
+> Are you looking for a complete Lifecycle Job guide? Check [this one](https://hub.qovery.com/guides/tutorial/how-to-use-lifecycle-job-to-deploy-any-kind-of-resources/)
+
 ## Documentation
 
 - [The Lifecycle Job documentation](https://hub.qovery.com/docs/using-qovery/configuration/lifecycle-job/).
