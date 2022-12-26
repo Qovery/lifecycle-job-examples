@@ -6,4 +6,4 @@ set -e
 export QOVERY_ENVIRONMENT_ID=$(echo "$QOVERY_ENVIRONMENT_ID" | cut -d "-" -f 1)
 
 # Execute the given or default command:
-/bin/bash -l -c "$*"
+/bin/bash -l -c "$@"
