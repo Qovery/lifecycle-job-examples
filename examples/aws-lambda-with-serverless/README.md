@@ -39,11 +39,35 @@ docker run \
   -e AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_ACCESS_KEY> \
   -e AWS_REGION=us-east-1 \
   -e QOVERY_ENVIRONMENT_ID=1234567890 \
+  aws-lambda-with-serverless \
+  deploy.sh
+```
+
+or
+
+```shell
+docker run \
+  -e AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY_ID> \
+  -e AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_ACCESS_KEY> \
+  -e AWS_REGION=us-east-1 \
+  -e QOVERY_ENVIRONMENT_ID=1234567890 \
   -it --entrypoint /bin/sh aws-lambda-with-serverless \
   -c "serverless deploy --stage \$QOVERY_ENVIRONMENT_ID"
 ```
 
 To delete your application:
+
+```shell
+docker run \
+  -e AWS_ACCESS_KEY_ID=<YOUR_AWS_ACCESS_KEY_ID> \
+  -e AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_ACCESS_KEY> \
+  -e AWS_REGION=us-east-1 \
+  -e QOVERY_ENVIRONMENT_ID=1234567890 \
+  aws-lambda-with-serverless \
+  remove.sh
+```
+
+or
 
 ```shell
 docker run \
@@ -73,12 +97,12 @@ To inject back environment variables via Qovery Lifecycle Job output:
 
 Start Event CMD Arguments: 
 ```shell
-["-c","serverless deploy --stage \$QOVERY_ENVIRONMENT_ID && serverless manifest --stage \$QOVERY_ENVIRONMENT_ID -p qovery-output.js"]
+["deploy.sh"]
 ```
 
 Delete Event CMD Arguments:
 ```shell
-["-c","serverless remove --stage \$QOVERY_ENVIRONMENT_ID"]
+["remove.sh"]
 ```
 
 ![](assets/1.png)
