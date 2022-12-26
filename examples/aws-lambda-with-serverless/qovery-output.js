@@ -6,9 +6,11 @@ module.exports = async function processManifest(manifestData) {
   // to get the manifest data, you can use the following command:
   // serverless manifest --json
 
+  const qoveryEnvironmentId = process.env.QOVERY_ENVIRONMENT_ID;
+
   const qoveryOutputFileContent = {
     "HELLO_FUNCTION_ENDPOINT_URL": {
-      "value": manifestData.dev.urls.httpApi,
+      "value": manifestData[qoveryEnvironmentId].urls.httpApi,
       "type": "string",
       "sensitive": false,
     },
