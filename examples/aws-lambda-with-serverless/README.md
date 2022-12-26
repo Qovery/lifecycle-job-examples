@@ -105,4 +105,4 @@ Delete Event CMD Arguments:
 ["remove.sh"]
 ```
 
-![](assets/1.png)
+![](assets/1_.png)
