@@ -1,0 +1,5 @@
+config:
+  aws:region: us-west-2
+  pulumi:template: https://github.com/pulumi/templates/tree/master/vm-aws-typescript
+  vm-aws-typescript:instanceType: t3.micro
+  vm-aws-typescript:vpcNetworkCidr: 10.0.0.0/16

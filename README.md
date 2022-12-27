@@ -25,9 +25,9 @@ Here is a list of all the examples
 | Call HTTP endpoint when an Environment is created                     | [here](/examples/call-http-endpoint-when-an-environment-is-created) |
 | Create and Destroy an AWS RDS instance with Terraform                 | [here](/examples/aws-rds-with-terraform)                            |
 | Create and Destroy an AWS Lambda with Serverless                      | [here](/examples/aws-lambda-with-serverless)                        |
+| Create and Destroy an AWS EC2 instance with Pulumi                    | [here](/examples/aws-ec2-with-pulumi)                               |
 | Seed a database with a custom script                                  | WIP                                                                 |
 | Seed a database with [Replibyte](https://github.com/Qovery/Replibyte) | WIP                                                                 |
-| Create and Destroy an AWS SQS queue with Pulumi                       | WIP                                                                 |
 
 ## How to contribute
 
