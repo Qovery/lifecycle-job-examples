@@ -139,13 +139,13 @@ const qoveryOutputFileContent = {
 };
 
 // Write the data to a file that will be used by Qovery
-fs.writeFile('/qovery-output/qovery-output.json', JSON.stringify(qoveryOutputFileContent, null, 2), function (err) {
-  if (err) {
-    pulumi.log.warn(err.toString());
-  } else {
-    pulumi.log.info('/qovery-output/qovery-output.json Saved!');
-  }
-});
+// fs.writeFile('/qovery-output/qovery-output.json', JSON.stringify(qoveryOutputFileContent, null, 2), function (err) {
+//   if (err) {
+//     pulumi.log.warn(err.toString());
+//   } else {
+//     pulumi.log.info('/qovery-output/qovery-output.json Saved!');
+//   }
+// });
 
 // Export the instance's publicly accessible IP address and hostname.
 export const ip = server.publicIp;
