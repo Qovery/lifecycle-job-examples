@@ -8,7 +8,8 @@ function generateCidr(key: string): string {
   // Use the key string to generate the second and third bytes of the block
   const byte2 = hash % 256;
   // Return the CIDR in the form "10.0.X.0/24" where X are the hashed bytes
-  return `10.0.${byte2}.0/24`;
+  //return `10.0.${byte2}.0/24`;
+  return "10.0.8.0/24"
 }
 
 // Get some configuration values or set default values.
@@ -139,13 +140,13 @@ const qoveryOutputFileContent = {
 };
 
 // Write the data to a file that will be used by Qovery
-// fs.writeFile('/qovery-output/qovery-output.json', JSON.stringify(qoveryOutputFileContent, null, 2), function (err) {
-//   if (err) {
-//     pulumi.log.warn(err.toString());
-//   } else {
-//     pulumi.log.info('/qovery-output/qovery-output.json Saved!');
-//   }
-// });
+fs.writeFile('/qovery-output/qovery-output.json', JSON.stringify(qoveryOutputFileContent, null, 2), function (err) {
+  if (err) {
+    pulumi.log.warn(err.toString());
+  } else {
+    pulumi.log.info('/qovery-output/qovery-output.json Saved!');
+  }
+});
 
 // Export the instance's publicly accessible IP address and hostname.
 export const ip = server.publicIp;
