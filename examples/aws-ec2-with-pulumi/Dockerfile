@@ -7,8 +7,11 @@ WORKDIR /app
 RUN curl -fsSL https://get.pulumi.com | sh
 ENV PATH="/root/.pulumi/bin:${PATH}"
 
-COPY . .
+COPY package.json .
+COPY package-lock.json .
 
 RUN npm install
+
+COPY . .
 
 ENTRYPOINT [ "/bin/sh" ]
