@@ -117,7 +117,7 @@ const server = new aws.ec2.Instance("server", {
 // Data to export to Qovery
 const qoveryOutputFileContent = {
   "EC2_HOSTNAME": {
-    "value": server.publicDns,
+    "value": server.publicDns.get(),
     "type": "string",
     "sensitive": false,
   },
@@ -127,12 +127,12 @@ const qoveryOutputFileContent = {
     "sensitive": false,
   },
   "EC2_PUBLIC_IP": {
-    "value": server.publicIp,
+    "value": server.publicIp.get(),
     "type": "string",
     "sensitive": false,
   },
   "EC2_HOSTNAME_WITH_SCHEME": {
-    "value": `http://${server.publicDns}`,
+    "value": `http://${server.publicDns.get()}`,
     "type": "string",
     "sensitive": false,
   },

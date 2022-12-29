@@ -10,7 +10,8 @@ This repository contains ready to use Qovery Lifecycle Jobs examples
 4. Set the "Root application path" to the example you want to use (e.g. `examples/seed-a-database-with-replibyte`)
 5. Set the "Dockerfile path" to the Dockerfile in the example you want to use (e.g. `Dockerfile`)
 
-> Are you looking for a complete Lifecycle Job guide? Check [this one](https://hub.qovery.com/guides/tutorial/how-to-use-lifecycle-job-to-deploy-any-kind-of-resources/)
+> Are you looking for a complete Lifecycle Job guide?
+> Check [this one](https://hub.qovery.com/guides/tutorial/how-to-use-lifecycle-job-to-deploy-any-kind-of-resources/)
 
 ## Documentation
 
@@ -26,6 +27,7 @@ Here is a list of all the examples
 | Create and Destroy an AWS RDS instance with Terraform                 | [here](/examples/aws-rds-with-terraform)                            |
 | Create and Destroy an AWS Lambda with Serverless                      | [here](/examples/aws-lambda-with-serverless)                        |
 | Create and Destroy an AWS EC2 instance with Pulumi                    | [here](/examples/aws-ec2-with-pulumi)                               |
+| Create and Destroy a MongoDB Atlas instance with Terraform            | WIP                                                                 |
 | Seed a database with a custom script                                  | WIP                                                                 |
 | Seed a database with [Replibyte](https://github.com/Qovery/Replibyte) | WIP                                                                 |
 
