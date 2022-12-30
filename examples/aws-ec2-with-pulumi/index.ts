@@ -121,9 +121,9 @@ export const url = pulumi.interpolate`http://${server.publicDns}`;
 export const mSubnetCidr = subnetCidr;
 
 // Data to export to Qovery
-const qoveryOutputFileContent = pulumi.all([server.publicDns, server.publicIp])
+pulumi.all([server.publicDns, server.publicIp])
   .apply(([publicDns, publicIp]) => {
-    return {
+    const qoveryOutputFileContent = {
       "EC2_HOSTNAME": {
         "value": publicDns,
         "type": "string",
@@ -145,13 +145,13 @@ const qoveryOutputFileContent = pulumi.all([server.publicDns, server.publicIp])
         "sensitive": false,
       },
     }
-  });
 
-// Write the data to a file that will be used by Qovery
-fs.writeFile('/qovery-output/qovery-output.json', JSON.stringify(qoveryOutputFileContent, null, 2), function (err) {
-  if (err) {
-    pulumi.log.warn(err.toString());
-  } else {
-    pulumi.log.info('/qovery-output/qovery-output.json Saved!');
-  }
-});
+    // Write the data to a file that will be used by Qovery
+    fs.writeFile('/qovery-output/qovery-output.json', JSON.stringify(qoveryOutputFileContent, null, 2), function (err) {
+      if (err) {
+        pulumi.log.warn(err.toString());
+      } else {
+        pulumi.log.info('/qovery-output/qovery-output.json Saved!');
+      }
+    });
+  });
