@@ -27,6 +27,8 @@ Here is a list of all the examples
 | Create and Destroy an AWS RDS instance with Terraform                 | [here](/examples/aws-rds-with-terraform)                            |
 | Create and Destroy an AWS Lambda with Serverless                      | [here](/examples/aws-lambda-with-serverless)                        |
 | Create and Destroy an AWS EC2 instance with Pulumi                    | [here](/examples/aws-ec2-with-pulumi)                               |
+| Execute a Helm chart                                                  | [here](/examples/helm)                                              |
+| Execute a shell script                                                | [here](/examples/shell-script)                                      |
 | Create and Destroy a MongoDB Atlas instance with Terraform            | WIP                                                                 |
 | Seed a database with a custom script                                  | WIP                                                                 |
 | Seed a database with [Replibyte](https://github.com/Qovery/Replibyte) | WIP                                                                 |
