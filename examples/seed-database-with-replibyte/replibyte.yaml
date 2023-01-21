@@ -1,0 +1,5 @@
+datastore:
+  local_disk:
+    dir: ./datastore
+destination:
+  connection_uri: $DATABASE_URL

@@ -23,6 +23,7 @@ Here is a list of all the examples
 
 | Description                                                           | Folder                                                              |
 |-----------------------------------------------------------------------|---------------------------------------------------------------------|
+| Seed a database with [Replibyte](https://github.com/Qovery/Replibyte) | [here](/examples/seed-database-with-replibyte)                      |
 | Call HTTP endpoint when an Environment is created                     | [here](/examples/call-http-endpoint-when-an-environment-is-created) |
 | Create and Destroy an AWS RDS instance with Terraform                 | [here](/examples/aws-rds-with-terraform)                            |
 | Create and Destroy an AWS Lambda with Serverless                      | [here](/examples/aws-lambda-with-serverless)                        |
@@ -31,7 +32,6 @@ Here is a list of all the examples
 | Execute a shell script                                                | [here](/examples/shell-script)                                      |
 | Create and Destroy a MongoDB Atlas instance with Terraform            | WIP                                                                 |
 | Seed a database with a custom script                                  | WIP                                                                 |
-| Seed a database with [Replibyte](https://github.com/Qovery/Replibyte) | WIP                                                                 |
 
 ## How to contribute
 
