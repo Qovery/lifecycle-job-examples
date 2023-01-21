@@ -1,6 +1,8 @@
 FROM ghcr.io/qovery/replibyte:latest
 
-ENV PATH="./:${PATH}"
+WORKDIR /app
+
+RUN mv /replibyte /usr/local/bin/
 
 COPY . .
 
