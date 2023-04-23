@@ -126,10 +126,15 @@ if [ "$ACTION" == "install" ] ; then
     echo -e "\n\n[+] Running: $CMD\n"
     $CMD
 elif [ "$ACTION" == "uninstall" ] ; then
-    ## Uninstall
-    CMD="helm uninstall --wait $HELM_DRY_RUN $HELM_NAMESPACE_PARAMS $HELM_TIMEOUT $HELM_VALUES_PATH $HELM_RELEASE_NAME"
-    echo -e "\n\n[+] Running: $CMD\n"
-    $CMD
+    ## Ensure it's installed, otherwise, it's ok
+    if [ $(helm $HELM_NAMESPACE_PARAMS list -f "^$HELM_RELEASE_NAME$" --no-headers | wc -l) -eq 1 ] ; then
+        ## Uninstall
+        CMD="helm uninstall --wait $HELM_DRY_RUN $HELM_NAMESPACE_PARAMS $HELM_TIMEOUT $HELM_VALUES_PATH $HELM_RELEASE_NAME"
+        echo -e "\n\n[+] Running: $CMD\n"
+        $CMD
+    else
+        echo "'$HELM_RELEASE_NAME' release in namespace '$HELM_KUBERNETES_NAMESPACE' was not found, it may have already been uninstalled manually"
+    fi
 else
     echo "Unknown action: $ACTION"
     exit 1
