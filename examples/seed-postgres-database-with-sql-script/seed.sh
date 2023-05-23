@@ -44,7 +44,7 @@ fi
 echo "Database seeding started."
 
 # Seed the database
-pg_restore -d '$DATABASE_URL' seed.sql
+pg_restore -d "$DATABASE_URL" seed.sql
 
 if [[ $? -eq 0 ]]; then
   echo "Database seeding completed successfully."
