@@ -21,17 +21,18 @@ This repository contains ready to use Qovery Lifecycle Jobs examples
 
 Here is a list of all the examples
 
-| Description                                                           | Folder                                                              |
-|-----------------------------------------------------------------------|---------------------------------------------------------------------|
-| Seed a Postgres database with a SQL script                            | [here](/examples/seed-postgres-database-with-sql-script)            |
-| Seed a database with [Replibyte](https://github.com/Qovery/Replibyte) | [here](/examples/seed-database-with-replibyte)                      |
-| Call HTTP endpoint when an Environment is created                     | [here](/examples/call-http-endpoint-when-an-environment-is-created) |
-| Create and Destroy an AWS RDS instance with Terraform                 | [here](/examples/aws-rds-with-terraform)                            |
-| Create and Destroy an AWS Lambda with Serverless                      | [here](/examples/aws-lambda-with-serverless)                        |
-| Create and Destroy an AWS EC2 instance with Pulumi                    | [here](/examples/aws-ec2-with-pulumi)                               |
-| Execute a Helm chart                                                  | [here](/examples/helm)                                              |
-| Execute a shell script                                                | [here](/examples/shell-script)                                      |
-| Create and Destroy a MongoDB Atlas instance with Terraform            | WIP                                                                 |
+| Description                                                            | Folder                                                              |
+|------------------------------------------------------------------------|---------------------------------------------------------------------|
+| Seed a Postgres database with a SQL script                             | [here](/examples/seed-postgres-database-with-sql-script)            |
+| Seed a database with [Replibyte](https://github.com/Qovery/Replibyte)  | [here](/examples/seed-database-with-replibyte)                      |
+| Call HTTP endpoint when an Environment is created                      | [here](/examples/call-http-endpoint-when-an-environment-is-created) |
+| Create and Destroy an AWS RDS instance with Terraform                  | [here](/examples/aws-rds-with-terraform)                            |
+| Create and Destroy an AWS Lambda with Serverless                       | [here](/examples/aws-lambda-with-serverless)                        |
+| Create and Destroy an AWS EC2 instance with Pulumi                     | [here](/examples/aws-ec2-with-pulumi)                               |
+| Execute a Helm chart                                                   | [here](/examples/helm)                                              |
+| Execute a shell script                                                 | [here](/examples/shell-script)                                      |
+| Build static frontend app (NextJS) and upload assets on AWS Cloudfront | [here](/examples/deploy-nextjs-app-on-cloudfront)                   |
+| Create and Destroy a MongoDB Atlas instance with Terraform             | WIP                                                                 |
 
 ## How to contribute
 
