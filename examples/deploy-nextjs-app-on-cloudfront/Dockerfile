@@ -17,4 +17,4 @@ COPY --from=awscli /usr/local/aws-cli/v2/current/dist/aws /usr/local/bin
 COPY upload.sh .
 RUN chmod +x upload.sh
 
-ENTRYPOINT [ "/bin/sh" ]
+ENTRYPOINT [ "/bin/bash" ]

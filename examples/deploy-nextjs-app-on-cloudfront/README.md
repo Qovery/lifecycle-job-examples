@@ -9,7 +9,7 @@ This example shows you how to deploy your Next.js app on AWS Cloudfront.
 3. Select your forked repository with the appropriate branch (e.g. `main`)
 4. Set the "Root application path" to the example you want to use (e.g. `examples/deploy-nextjs-app-on-cloudfront`)
 5. Set the "Dockerfile path" to the Dockerfile in the example you want to use (e.g. `Dockerfile`)
-6. Select "Start" event and add the following CMD Arguments: `["-c", "upload.sh"]` - which indicates to the Lifecycle Job to run the `upload.sh` script when the Lifecycle Job starts.
+6. Select "Start" event and add the following CMD Arguments: `["upload.sh"]` - which indicates to the Lifecycle Job to run the `upload.sh` script when the Lifecycle Job starts.
 7. Create your Lifecycle Job but **do not deploy it yet**.
 8. Go to your Lifecycle Job variables and create:
    1. `AWS_ACCESS_KEY_ID` environment variable alias to provide to `upload.sh` your AWS access key ID.

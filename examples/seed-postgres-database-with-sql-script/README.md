@@ -15,7 +15,7 @@ This example shows you how to seed your Postgres database with a SQL script.
 3. Select your forked repository with the appropriate branch (e.g. `main`)
 4. Set the "Root application path" to the example you want to use (e.g. `examples/seed-postgres-database-with-sql-script`)
 5. Set the "Dockerfile path" to the Dockerfile in the example you want to use (e.g. `Dockerfile`)
-6. Select "Start" event and add the following CMD Arguments: `["-c", "seed.sh"]` - which indicates to the Lifecycle Job to run the `seed.sh` script when the Lifecycle Job starts.
+6. Select "Start" event and add the following CMD Arguments: `["seed.sh"]` - which indicates to the Lifecycle Job to run the `seed.sh` script when the Lifecycle Job starts.
 7. Create your Lifecycle Job but **do not deploy it yet**.
 8. Go to your Lifecycle Job variables and create:
    1. `DATABASE_URL` environment variable alias to provide to `seed.sh` your database connection string where to restore your seed.
