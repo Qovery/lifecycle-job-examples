@@ -20,6 +20,7 @@ This example shows you how to seed your Postgres database with a SQL script.
 8. Go to your Lifecycle Job variables and create:
    1. `DATABASE_URL` environment variable alias to provide to `seed.sh` your database connection string where to restore your seed.
    2. `SEED_URL` environment variable alias to provide to `seed.sh` your seed SQL script URL. (can be a public S3 bucket URL or any other URL)
+   3. `RESTORE_METHOD` environment variable alias to provide to `seed.sh` your restore method. (can be `psql` or `pg_restore`)
 9. Deploy your Lifecycle Job.
 
 Your database is now seeded with your SQL script.

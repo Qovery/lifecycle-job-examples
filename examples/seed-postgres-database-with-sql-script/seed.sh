@@ -1,10 +1,14 @@
 #!/bin/env bash
 
-# Check if DATABASE_URL is set
-if [[ -z "${DATABASE_URL}" ]]; then
-  echo "The DATABASE_URL environment variable is not set."
-  exit 1
-fi
+# set -e at the beginning of the script to cause the shell to exit if any command exits with a non-zero status.
+set -e
+
+# set -u to treat unset variables as an error and immediately exit.
+# This would reduce the need for manual checks for the presence of environment variables.
+set -u
+
+# set -o pipefail to cause the script to fail if any of the commands piped together fail.
+set -o pipefail
 
 # Check if psql is installed
 if ! command -v psql &> /dev/null; then
@@ -18,22 +22,8 @@ if ! command -v curl &> /dev/null; then
   exit 1
 fi
 
-# Define the URL of the SQL dump on the S3 bucket
-# SEED_URL="http://your-bucket.s3.amazonaws.com/seed.sql"
-
-# Check if DATABASE_URL is set
-if [[ -z "${SEED_URL}" ]]; then
-  echo "The SEED_URL environment variable is not set."
-  exit 1
-fi
-
 # Download the SQL dump
 curl "${SEED_URL}" -o seed.sql
-
-if [[ $? -ne 0 ]]; then
-  echo "An error occurred while downloading the SQL dump."
-  exit 1
-fi
 
 # Check if seed.sql exists in the current directory
 if [[ ! -f "seed.sql" ]]; then
@@ -44,11 +34,13 @@ fi
 echo "Database seeding started."
 
 # Seed the database
-pg_restore -d "$DATABASE_URL" seed.sql
-
-if [[ $? -eq 0 ]]; then
-  echo "Database seeding completed successfully."
+if [[ "${RESTORE_METHOD}" == "pg_restore" ]]; then
+  pg_restore -d "$DATABASE_URL" seed.sql
+elif [[ "${RESTORE_METHOD}" == "psql" ]]; then
+  psql "$DATABASE_URL" < seed.sql
 else
-  echo "An error occurred while seeding the database."
+  echo "Invalid restore method. Please set the RESTORE_METHOD environment variable to either 'pg_restore' or 'psql'."
   exit 1
 fi
+
+echo "Database seeding completed successfully."
