@@ -19,4 +19,4 @@ This example shows you how to deploy your Next.js app on AWS Cloudfront.
    5. `AWS_CLOUDFRONT_DISTRIBUTION_ID` environment variable alias to provide to `upload.sh` your AWS Cloudfront distribution ID.
 9. Deploy your Lifecycle Job.
 
-Your database is now seeded with your SQL script.
+Your NextJS app is now deployed on AWS with Cloudfront.
