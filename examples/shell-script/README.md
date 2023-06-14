@@ -13,9 +13,7 @@ docker build -t shell-script .
 ```
 
 ```shell
-docker run \
-  -it --entrypoint /bin/sh shell-script \
-  -c "run.sh"
+docker run shell-script create-environment.sh
 ```
 
 ### Qovery

@@ -31,6 +31,7 @@ Here is a list of all the examples
 | Create and Destroy an AWS EC2 instance with Pulumi                     | [here](/examples/aws-ec2-with-pulumi)                               |
 | Execute a Helm chart                                                   | [here](/examples/helm)                                              |
 | Execute a shell script                                                 | [here](/examples/shell-script)                                      |
+| Execute a shell script and pass env vars to other services             | [here](/examples/shell-script-with-output-env-vars)                 |
 | Build static frontend app (NextJS) and upload assets on AWS Cloudfront | [here](/examples/deploy-nextjs-app-on-cloudfront)                   |
 | Create and Destroy a MongoDB Atlas instance with Terraform             | WIP                                                                 |
 
