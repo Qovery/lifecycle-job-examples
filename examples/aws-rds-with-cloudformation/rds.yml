@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: AWS CloudFormation for RDS instance.
+
+Parameters:
+  QoveryEnvironmentId:
+    Type: String
+    Description: Qovery Environment ID for tagging.
+
+Resources:
+  RDSDBInstance:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceClass: db.t2.micro
+      AllocatedStorage: 20
+      Engine: mysql
+      MasterUsername: admin
+      MasterUserPassword: 'A1s2d3f4g5'
+      DBName: qoverydb
+      Tags:
+        - Key: Environment
+          Value: !Ref QoveryEnvironmentId
+
+Outputs:
+  EndpointAddress:
+    Description: "The endpoint address of the RDS instance."
+    Value: !GetAtt RDSDBInstance.Endpoint.Address
+  EndpointPort:
+    Description: "The endpoint port of the RDS instance."
+    Value: !GetAtt RDSDBInstance.Endpoint.Port
