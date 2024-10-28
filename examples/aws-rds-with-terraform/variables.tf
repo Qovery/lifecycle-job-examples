@@ -1,30 +1,37 @@
 variable "aws_region" {
-  type    = string
-  default = "us-east-2"
-}
-
-variable "terraform_backend_bucket" {
-  type    = string
-  # TODO change this to your bucket name
-  default = "qovery-demo-terraform-states" # Name of the Backend S3 bucket
-}
-
-variable "terraform_backend_key" {
-  type    = string
-  default = "test" # Name of the Backend S3 key
+  type        = string
+  default     = "us-east-2"
+  description = "The AWS RDS region"
 }
 
 variable "aws_access_key_id" {
-  type    = string
-  default = "your AWS access key id"
+  type        = string
+  description = "The AWS RDS access key ID"
 }
 
 variable "aws_secret_access_key" {
-  type    = string
-  default = "your AWS secret access key"
+  type        = string
+  description = "The AWS RDS secret access key"
+}
+
+variable "eks_cluster_name" {
+  description = "Name of the EKS cluster"
+  type        = string
 }
 
 variable "qovery_environment_id" {
-  type    = string
-  default = "1234567890"
+  type        = string
+  description = "The Qovery environment ID"
+}
+
+variable "username" {
+  type        = string
+  description = "The username for the RDS instance"
+  default     = "myuser"
+}
+
+variable "password" {
+  type        = string
+  description = "The password for the RDS instance - leave empty to generate a random password"
+  default     = ""
 }
