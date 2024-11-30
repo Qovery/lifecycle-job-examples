@@ -35,6 +35,8 @@ terraform apply
 
 ### To destroy your RDS instance
 
+set the flag `deletion_protection` to `false`
+
 ```shell
 terraform destroy
 ```
@@ -59,5 +61,7 @@ After the execution of the job, a few environment variables will be automaticall
 Go to the environment variable section of your environment and create an alias for each of them to match the syntax expected by your application.
 
 ### How to destroy it
+
+Update the repository and set the flag `deletion_protection` to `false`.
 
 Delete the resource on Qovery, it will trigger a `trigger destroy` command and remove the resource from your GCP account.
