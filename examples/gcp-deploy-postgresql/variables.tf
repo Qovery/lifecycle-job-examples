@@ -11,17 +11,17 @@ variable "region" {
 }
 
 variable "vpc_name" {
-  description = "Name of the VPC to use"
+  description = "Name of the VPC to use to install the database"
   type        = string
 }
 
 variable "subnet_name" {
-  description = "Name of the subnet to use"
+  description = "Name of the subnet to install the database"
   type        = string
 }
 
 variable "database_instance_name" {
-  description = "The environment"
+  description = "The database instance name"
   type        = string
 }
 
@@ -39,7 +39,7 @@ variable "database_version" {
 variable "instance_tier" {
   description = "The machine type to use"
   type        = string
-  default     = "db-custom-4-15360"  # 4 vCPUs, 15GB RAM - adjust based on needs
+  default     = "db-g1-small"  # 4 vCPUs, 15GB RAM - adjust based on needs
 }
 
 variable "disk_size_gb" {
