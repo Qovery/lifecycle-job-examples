@@ -2,7 +2,7 @@
 
 This example shows how to create and destroy an PostgreSQL instance with Terraform and Qovery Lifecycle Job.
 
-> This example is part of this complete guide: [Create and Destroy an AWS RDS Instance with Terraform](https://hub.qovery.com/guides/tutorial/how-to-use-lifecycle-job-to-deploy-any-kind-of-resources/).
+> This example is part of this complete guide: [Create and Destroy an GCP PostgreSQL instance with Terraform](https://hub.qovery.com/guides/tutorial/how-to-use-lifecycle-job-to-deploy-any-kind-of-resources/).
 
 ## How to test it locally
 
